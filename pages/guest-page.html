@@ -1,12 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ELM 방명록</title>
   <link rel="stylesheet" href="../styles/guest-page.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
+
+<script type="module">
+
+  // Firebase SDK 라이브러리 가져오기
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
+  import { getFirestore } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+  import { collection, addDoc } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+  import { getDocs } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+
+  // Firebase 구성 정보 설정
+  const firebaseConfig = {
+    apiKey: "AIzaSyBbrl3EHaBQvrgBUdORJl6Y5SEzKVvyEHY", 
+    authDomain: "sparta-735f6.firebaseapp.com",
+    projectId: "sparta-735f6",
+    storageBucket: "sparta-735f6.appspot.com",
+    messagingSenderId: "85843305390",
+    appId: "1:85843305390:web:37d7e2b8a12babb101de3f",
+    measurementId: "G-ZKTL84DMXB"
+  };
+
+  // Firebase 인스턴스 초기화
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+  $("#posting_btn").click(async function () {
+
+    let comment = $('#guest_input').val();
+    let doc = {
+      'guest_input': comment,
+    };
+    await addDoc(collection(db, "ELM_info_page_guest_list"), doc);
+    alert('저장되었습니다.');
+    window.location.reload();
+  })
+
+  let docs = await getDocs(collection(db, "ELM_info_page_guest_list"));
+  docs.forEach((doc) => {
+
+    let row = doc.data();
+    let comment = row['guest_input'];
+
+    let temp_html = `<p>${comment}</p>`
+    $('#guest_creation_list').append(temp_html);
+  })
+
+</script>
+
 <body>
-  guest page
+  <!-- section_04 guest_book_page -->
+  <section class="guest_book clearfix">
+
+    <!-- guest_input_box -->
+    <div class="guest_input_box">
+      <!-- guest_input -->
+      <input type="text" class="guest_input" id="guest_input" placeholder="ELM에게 하고 싶은 말을 적어주세요!">
+      <!-- posting_btn -->
+      <button class="posting_btn" id="posting_btn">기록하기</button>
+    </div>
+    <!-- /guest_input_box -->
+
+    <!-- guest_creation_list -->
+    <div class="guest_creation_list" id="guest_creation_list">      
+    </div>
+    <!-- guest_creation_list -->
+
+    <!-- guest_thanks_text -->
+    <div class="guest_thanks_text">
+      <p>방명록을 남겨주셔서 감사합니다!</p>
+    </div>
+    <!-- guest_thanks_text -->
+
+    <!-- guest_photo -->
+    <div class="guest_photo">
+      <p>ELM팀 메타버스 단체사진</p>
+    </div>
+    <!-- /guest_photo -->
+  </section>
+  <!-- /section_04 guest_book_page -->
 </body>
+
 </html>

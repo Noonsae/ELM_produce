@@ -1,1 +1,128 @@
-/* 스타일 작성 */
+@charset "utf-8";
+
+/* Guest_style */
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
+h1 {
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+address {
+  font-style: normal;
+}
+button {
+  cursor: pointer;
+  border: none;
+}
+img {
+  border: none;
+}
+/* /Reset */
+
+/* guest_book */
+.guest_book {
+  width: 1320px;
+  /* border: 2px solid blue; */
+  margin: 0 auto 150px;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+/* guest_input_box */
+.guest_input_box {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 50px;
+}
+
+/* guest_input */
+.guest_input {
+  width: 80%;
+  height: 50px;
+
+  font-size: 1.5em;
+  text-align: center;
+
+  color: #333;
+  background-color: #fff;
+  border-color: #e8344e;
+  border-radius: 15px;
+}
+
+.posting_btn {
+  font-size: 1.2em;
+  width: 8%;
+  border-radius: 15px;
+  background-color: #e8344e;
+  color: #fff;
+}
+
+.guest_creation_list {
+  width: 60%;
+  height: 500px;
+  padding: 2%;
+
+  font-size: 1.5em;
+  border: 5px solid rgba(175, 50, 200);
+
+  float: left;
+  overflow: auto;
+}
+
+/* 스크롤 바 */
+.guest_creation_list::-webkit-scrollbar {
+  width: 12px;
+  
+}
+.guest_creation_list::-webkit-scrollbar-thumb {  
+  background: #e8344e;
+  border-radius: 10px;
+}
+
+.guest_creation_list p {
+  width: 100%;
+  text-decoration: underline;
+}
+
+.guest_thanks_text {
+  width: 35%;
+  height: 150px;
+
+  text-align: center;
+  line-height: 144px;
+
+  font-size: 1.8em;
+  border: 3px solid seagreen;
+  float: right;
+}
+
+.guest_photo {
+  width: 35%;
+  height: 300px;
+  margin-top: 50px;
+  float: right;
+
+  text-indent: -9999px;
+  background-color: lightblue;
+  /* background-image: ; */
+}
