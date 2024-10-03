@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Jua&family=Noto+Sans+KR:wght@100..900&family=Orbit&display=swap');
+
+* {
+  font-family: "Noto Sans KR", sans-serif;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+    /* border: black 1px solid; */
+    width: 1320px;
+    height: 900px;
+    margin: auto;
+}
+
+.title > p {
+    /* font-family: 'Jua'; */
+    font-family: "Orbit", sans-serif;
+    font-weight: bold; 
+    color: #333;
+    font-size: 40pt;
+    text-align: center;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3개의 컬럼 생성, 각 컬럼은 동일한 너비 */
+    gap: 20px;
+    display: flex;
+    justify-content: center;
+    /* 수평 가운데 정렬 */
+    align-items: center;
+}
+
+.card {
+    background-color: rgba(251, 237, 208, 0.62);
+    border-radius: 20px;
+    width: 270px;
+    height: 330px;
+    text-align: center;
+    cursor: pointer;
+    margin: 10px 5px 20px 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* 그림자 효과 */
+
+}
+
+.card > img {
+    height: 70%;
+    width: 80%;
+    margin: 20px auto 0 auto;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    /* 이미지 확대 */
+    filter: brightness(80%);
+    /* 이미지 색상 어둡게 (원래 색상의 80%) */
+}
+
+.card-text {
+    font-family: "Orbit", sans-serif;
+    font-weight: bold; 
+    color: #333;
+    font-size: 25pt;
+    line-height: 22px; 
+}

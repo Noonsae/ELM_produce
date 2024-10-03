@@ -1,0 +1,140 @@
+/* team-card */
+.team-card {
+  position: fixed;
+  display: flex;
+  top: 50%;
+  left: 50%;
+  width: 1100px;
+  height: 700px;
+  padding: 50px;
+  opacity: 0;
+  visibility: hidden;
+  border-radius: 10px;
+  z-index: 30; /* overlay보다 위로 오도록 설정 */
+  transform: translate(-50%, -50%);
+  transition: opacity 300ms ease-in-out, visibility 300ms ease-in-out;
+  background-color: #fff;
+  box-shadow: 10px 11px 32px -6px rgba(0,0,0,0.44);
+  -webkit-box-shadow: 10px 11px 32px -6px rgba(0,0,0,0.44);
+  -moz-box-shadow: 10px 11px 32px -6px rgba(0,0,0,0.44);
+}
+
+.team-card.is-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.team-card-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 4;
+}
+
+.photo {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-image: url(https://img1.newsis.com/2023/07/12/NISI20230712_0001313626_web.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 20px;
+}
+
+.name {
+  font-size: 50px;
+  font-weight: 900;
+}
+
+.team-card-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+  padding: 0 50px;
+  overflow-y: auto;
+  flex: 6;
+}
+
+.team-card-info div {
+  margin-bottom: 20px;
+}
+
+.team-card-info div:last-child {
+  margin-bottom: 0;
+}
+
+.team-card-info dt {
+  color: #333333;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.team-card-info dd {
+  font-size: 21px;
+}
+
+.team-card-info div:last-child dt {
+  display: none;
+}
+
+.team-card-info div:last-child dd {
+  color: gray;
+  font-weight: 500;
+}
+
+/* close button */
+.close-btn {
+  position: fixed;
+  top: 8px;
+  right: 8px;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+.close-btn::after {
+  content: "\00d7";
+  display: block;
+  color: #333333;
+  font-size: 25px;
+  transition: color 200ms ease-in-out;
+}
+
+.close-btn:hover::after {
+  color: gray;
+}
+
+/* overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 300ms ease-in-out, visibility 300ms ease-in-out;
+}
+
+.overlay.is-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* 스크롤 바 */
+.team-card-info::-webkit-scrollbar {
+  width: 6px;
+}
+
+.team-card-info::-webkit-scrollbar-thumb {
+  height: 30%;
+  background: rgb(216, 210, 210);
+  border-radius: 10px;
+}
