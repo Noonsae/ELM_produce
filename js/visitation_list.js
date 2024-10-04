@@ -19,15 +19,29 @@
   const app = initializeApp(firebaseConfig);
   const db = getFirestore(app);
 
-  // postiong_btn을 클릭했을 때,
+  // 게시물 데이터를 저장할 배열
+  let posts = [];
+
+  // 게시물 추가 함수
+  function addPost() {
+    const post_input = document.getElementById('visitation_input');
+    const content = post_input.value;
+
+
+  }
+
+
+  // posting_btn을 클릭했을 때,
   $("#posting_btn").click(async function () {
 
     // 입력창에 들어온 value값을 DB에 업데이트
     let comment = $('#visitation_input').val();
-    let user_name = $('#visitation_name_input').val();
+    let user_name = $('#visitation_name_input').val();    
+
     let doc = {
       'visitation_input': comment,
       'visitation_name_input': user_name,
+
     };
 
     // 데이터 저장 후 알림창 생성
@@ -42,12 +56,12 @@
 
     let row = doc.data();
     let comment = row['visitation_input'];
+    let user_name = row['visitation_name_input'];
 
     let temp_html =
     `
-    <div class=comment_box>
-      <p>${user_name} : ${comment}</p>
-    </div>
+      <p>${comment}</p>
+      <p class="date">작성일: ${createdAt.toLocaleString()}</p>    
     `
     $('#visitation_board').append(temp_html);
   })
