@@ -21,29 +21,8 @@
   text-align: center;
 }
 
-h3 {
-  margin: 0;
-}
-.title {
-  font-size: 10em;
-  font-weight: 900;
-  margin: 0;
-}
-
-.jb_content {
-  font-weight: 800;
-  font-size: 2.4em;
-  color: #000;
-  margin: 0;
-}
-
-.eng {
-  color: #bfc0c2;
-}
-
 .team_inner {
-  width: 1320px;
-  height: calc(100vh -400px);
+  width: 1320px;  
 
   margin: 0 auto;
   padding-top: 50px;
@@ -54,18 +33,40 @@ h3 {
   justify-content: space-between; /* 수평 가운데 정렬 */
   align-items: center; /* 수직 가운데 정렬 */
 }
+
+h3 {
+  margin: 0;
+  color: #000;
+}
+.title {
+  font-size: 10em;
+  font-weight: 900;
+  margin: 0;
+}
+
+.jb_content {
+  font-weight: 800;
+  font-size: 2.4em;
+  color: #111;
+  margin: 0;
+}
+
+.eng {
+  color: #333;  
+}
+
+
 /* ground rule 밖을 둘러썬 div css */
 .ground {
   width: 620px;
-  height: 500px;
+  height: auto;
   text-align: left;
-  font-weight: 700;
+  font-weight: 700;  
 }
 
 /* ground rule */
 .rule {
-  font-size: 50px;
-  margin-top: 20px;
+  font-size: 5em;
   font-weight: 700;
   text-align: center;
   color: black;
@@ -82,7 +83,7 @@ h3 {
   flex-direction: column;
   align-items: start;
 
-  padding: 20px;
+  padding: 0px;
   color: black;
   background-color: #f6f9fa;
   opacity: 100%;

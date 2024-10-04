@@ -55,7 +55,7 @@
     <!-- main_visual -->
     <section class="main_visual" id="main_page">
         <div class="main_overlay">
-            <h2>ELM팀 소개 페이지입니다</h2>
+            <!-- <h2>ELM팀 소개 페이지입니다</h2> -->
         </div>
         <!-- 비쥬얼사진이라는 것을 알려주는 text 추가 후 text-indent:-9999em -->
         <!-- main_visual이 심심해 보인다면?? 메타버스 단체사진을 여러장 촬영 후 롤링(슬라이드) 추가 가능 -->
@@ -82,13 +82,19 @@
             <div class="ground">
                 <h3 class="rule">Ground rules</h3>
                 <div class="rule_text">
-                    <p>- 서로에게 상처 받는 말 부담스러운 말 하지 않기</p>
-                    <p>- 피드백을 요청하면 긍정/부정에 관계 없이 확실하게 답변하기.</p>
-                    <p>- 모르는 내용이 있다면 부끄러워 하지 말고 튜터님 혹은 팀원에게 물어보기.</p>
-                    <p>- 누구 한명이라도 모르는 것이 있으면 짚고 넘어가기.</p>
-                    <p>- 팀원 간 의견 및 정보 공유 적극적으로 하기.</p>
-                    <p>- 자리비울 때, 채팅에라도 잠시 자리를 비우겠다고 이야기해주기.</p>
-                    <p>- 자신이 맡은 일에 책임감 가지기!</p>
+                    <p>존중 :
+                        상처 주는 말이나 부담스러운 말은 금지! 서로의 마음을 배려하며 소통해요</p>
+                    <p>이해 :
+                        팀원 중 한 명이라도 모르면 다 같이 짚고 넘어가기! 팀과 함께 성장해요</p>
+                    <p>소통 :
+                        의견과 정보는 아끼지 말고 적극적으로 공유하기! 나눌수록 더 좋은 결과가 나와요
+                    </p>
+                    <p>공유 :
+                        하루 공부 상황과 일정을 팀과 공유하기! 잠깐 자리를 비우더라도 꼭 이야기해요
+                    </p>
+                    <p>책임감 :
+                        맡은 일은 끝까지 책임감 있게! 목표를 위해 최선을 다해요</p>
+
                 </div>
             </div>
 
@@ -194,36 +200,28 @@
 
     <!-- section_04 visitation_page -->
     <section class="visitation_wrap">
-        <div class="visitation clearfix">
+        <!-- visitation_input_box -->
+        <div class="visitation_input_box">
+            <!-- visitation_input -->
+            <input type="text" class="visitation_name_input" id="visitation_name_input" placeholder="이름">
+            <input type="text" class="visitation_text_input" id="visitation_text_input"
+                placeholder="ELM에게 하고 싶은 말을 적어주세요">
+            <!-- posting_btn -->
+            <button class="posting_btn" id="posting_btn">기록하기</button>
+        </div>
+        <!-- /visitation_input_box -->
 
-            <!-- visitation_input_box -->
-            <div class="visitation_input_box">
-                <!-- visitation_input -->
-                <input type="text" class="visitation_input" id="visitation_input" placeholder="ELM에게 하고 싶은 말을 적어주세요!">
-                <!-- posting_btn -->
-                <button class="posting_btn" id="posting_btn">기록하기</button>
-            </div>
-            <!-- /visitation_input_box -->
+        <!-- visitation_board -->
+        <div class="visitation_board" id="visitation_board">
+            
+        </div>
+        <!-- /visitation_board -->
 
-            <!-- visitation_board -->
-            <div class="visitation_board" id="visitation_board">
-            </div>
-            <!-- /visitation_board -->
-
-            <!-- visitation_text -->
-            <div class="visitation_text">
-                <p>
-                    방명록을 남겨주셔서 감사합니다!
-                    항상 꾸준히 노력하겠습니다.
-                </p>
-            </div>
-            <!-- /visitation_text -->
-
-            <!-- visitation_photo -->
-            <div class="visitation_photo">
-                <p>ELM팀 메타버스 단체사진</p>
-            </div>
-            <!-- /visitation_photo -->
+        <!-- visitation_photo -->
+        <div class="visitation_photo">
+            <p>적당한 사진</p>
+        </div>
+        <!-- /visitation_photo -->
         </div>
     </section>
     <!-- /section_04 visitation_page -->

@@ -24,8 +24,10 @@
 
     // 입력창에 들어온 value값을 DB에 업데이트
     let comment = $('#visitation_input').val();
+    let user_name = $('#visitation_name_input').val();
     let doc = {
       'visitation_input': comment,
+      'visitation_name_input': user_name,
     };
 
     // 데이터 저장 후 알림창 생성
@@ -41,6 +43,11 @@
     let row = doc.data();
     let comment = row['visitation_input'];
 
-    let temp_html = `<p>${comment}</p>`
+    let temp_html =
+    `
+    <div class=comment_box>
+      <p>${user_name} : ${comment}</p>
+    </div>
+    `
     $('#visitation_board').append(temp_html);
   })
