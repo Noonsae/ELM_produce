@@ -18,6 +18,7 @@ header {
   padding: 0 30px;
   background-color: black;
   margin-bottom: 80px;
+  z-index: 10;
 }
 
 .logo {
@@ -84,12 +85,4 @@ li {
 
 .main_visual {
   text-indent: -9999em;
-}
-
-section {
-  height: 100vh;
-  border: 5px solid blue;
-  z-index: 1;
-
-  font-size : 5EM;
 }
