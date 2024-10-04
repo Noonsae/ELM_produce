@@ -23,7 +23,7 @@ $(document).ready(function () {
     });
 
     // 모달 닫기 버튼 눌렀을 때
-    $('.close-btn').on('click', function () {
+    $('.btn-close').on('click', function () {
       $('.overlay').removeClass('is-active');
       $('.team-card').removeClass('is-active');
     });

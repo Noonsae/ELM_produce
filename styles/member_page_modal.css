@@ -17,7 +17,6 @@
   box-shadow: 10px 11px 32px -6px rgba(0,0,0,0.44);
   -webkit-box-shadow: 10px 11px 32px -6px rgba(0,0,0,0.44);
   -moz-box-shadow: 10px 11px 32px -6px rgba(0,0,0,0.44);
-  overflow: hidden;
 }
 
 .team-card.is-active {
@@ -89,25 +88,20 @@
 }
 
 /* close button */
-.close-btn {
+.btn-close {
   position: fixed;
-  top: 8px;
-  right: 8px;
-  cursor: pointer;
-  border: none;
+  top: 15px;
+  right: 15px;
+  font-size: 20px;
   background-color: transparent;
+  cursor: pointer;
 }
 
-.close-btn::after {
-  content: "\00d7";
-  display: block;
-  color: #333333;
-  font-size: 25px;
-  transition: color 200ms ease-in-out;
-}
-
-.close-btn:hover::after {
-  color: gray;
+.btn-close:focus,
+.btn-close:active {
+  border: none;
+  outline: none;
+  box-shadow: none;
 }
 
 /* overlay */
