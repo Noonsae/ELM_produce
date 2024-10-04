@@ -2,19 +2,18 @@
 
 /* visitation_page */
 .visitation_wrap {
-  width: 100%;
+  width: 1320px;
   height: 100vh;    
   display: flex; 
   align-items: center;
-  /* background-color: #7f7f7f; */
-
   font-family: "Noto Sans KR", sans-serif;
+
+  /* border: 3px solid #000; */
 }
 
-.visitation_wrap {
-  width: 1320px;  
-  padding: 2.8% 4.5%;
-  margin: 0 auto -50px;
+.visitation_wrap {  
+  margin: 0 auto;
+  padding-top: 200px;
   /* background: #555 no-repeat center / cover ; */
   /* border: 3px solid #333; */
 
@@ -24,8 +23,8 @@
 
 /* visitation_input_box */
 .visitation_input_box {
-  width: 100%;  
-  display: flex;
+  width: 1320px;  
+  display: flex;  
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
@@ -58,20 +57,24 @@
 }
 
 .visitation_inner {
-  width: 100%;  
-  height: 600px;
-  border: 3px solid #000;
+  width: 100%;
+  /* border: 3px solid #000; */
 }
 .visitation_board {
   display: flex;
-
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .visitation_posted {
-  width: 35%;
-  height: 480px;
+  width: 30%;
+  height: 500px;
 
-  padding: 10%;
+  padding: 10% 5% 0 5% ;
+  padding-top: 10%;
+  
+  
+  
   
   font-size: 2em;
   color: #111;  
@@ -84,8 +87,7 @@
 .visitation_photo {
   width: 35%;
   height: 320px;
-  margin-top: 20px;
-  float: right;
+  margin-top: 20px;  
 
   text-indent: -9999px;
   background: url(../assets/images/photo_ex.png) no-repeat center / cover;
