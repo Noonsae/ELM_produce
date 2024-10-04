@@ -2,7 +2,6 @@
 html {
   font-size: 0.625em;
   /* 기준점 :10PX */
-  font-family: preR, sans-serif;
 }
 .clearfix::after {
   content: "";
@@ -34,11 +33,9 @@ h1 {
 }
 a {
   text-decoration: none;
-  color: #333;
+  color: #000;
 }
-address {
-  font-style: normal;
-}
+
 button {
   border: none;
   background: none;
