@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="./styles/member_page.css">
     <link rel="stylesheet" href="./styles/member_page_modal.css">
     <link rel="stylesheet" href="./styles/visitation_page.css">
+    <link rel="stylesheet" href="./index.css">
 </head>
 
 <body>
@@ -240,7 +241,9 @@
         page_up_btn
         우측하단에 position:fixed 하여 클릭 시 web 최상단으로 이동
     -->
-
+    <button class="page_up_btn" type="button" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        <img src="./assets/images/up_button.jpg" alt="위로 올라가기">
+    </button>
     <!-- /attraction -->
     </div>
 </body>
