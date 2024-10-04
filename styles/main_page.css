@@ -10,7 +10,8 @@ header {
   height: 80px;
   padding: 0;
 
-  position: fixed;  
+  position: fixed;
+  z-index: 100;
 }
 .logo {
   display: block;  
@@ -64,7 +65,6 @@ li {
   height: 100vh;
   background: url(../assets/images/main.png) no-repeat center / cover;
     
-  position: absolute;
   left: 0; top: 0;
   margin: 0;
 
@@ -74,3 +74,12 @@ li {
 .main_visual {
   text-indent: -9999em;
 }
+
+section {
+  height: 100vh;
+  border: 5px solid blue;
+  z-index: 1;
+
+  font-size : 5EM;
+}
+

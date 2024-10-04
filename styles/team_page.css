@@ -1,12 +1,17 @@
 @charset "utf-8";
 
-.team_info {
+.team_inner {
+  width: 1320px;
+  height: calc(100vh - 300px);
+
+  margin: 0 auto;
+
   
-}
-.container_fluid {
-  position: relative;
-  margin-top: 85px;
   text-align: center;
+
+  display: flex;
+  justify-content: space-between; /* 수평 가운데 정렬 */
+  align-items: center; /* 수직 가운데 정렬 */
 }
 
 .content {
@@ -24,9 +29,8 @@
   color: #bfc0c2;
 }
 
-.topmain {
-  margin: 80px auto auto auto;
-  background-image: url("assets\images\image.png");
+.jumbotron {  
+  background-image: url("../assets/images/image.png");  
   filter: brightness(130%);
   background-size: 90%;
   width: 100%;
@@ -36,26 +40,48 @@
 }
 
 /*  */
-.navbox {
-  margin-top: 20px;
-  width: 1320px;
-  height: 400px;
-  text-align: center;
-  display: flex;
-  justify-content: center; /* 수평 가운데 정렬 */
-  align-items: center; /* 수직 가운데 정렬 */
-}
+
 
 /* ground rule 밖을 둘러썬 div css */
 .ground {
   width: 620px;
+  height: 500px;
   text-align: left;
   font-weight: 700;
 }
 
+/* ground rule */
+.rule {
+  margin-top: 20px;
+  font-weight: 700;
+  text-align: center;
+  color: black;
+}
+
+/* ground rule안에 내부 내용들 */
+.rule_text {
+  width: 620px;
+  height: 100%;
+  
+  font-size: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+
+  padding: 20px;
+  color: black;
+  background-color: #f6f9fa;
+  opacity: 100%;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px rgb(189, 189, 189);
+}
+
+
+
 /* 목표 */
 .goal {
-  position: relative;
+  /* position: relative; */
   width: 620px;
   height: 356px;
   font-weight: 700;
@@ -68,28 +94,8 @@
   justify-content: space-between;
 }
 
-/* ground rule안에 내부 내용들 */
-.content-text {
-  display: flex;
-  font-size: 20px;
-  width: 620px;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 20px;
-  color: black;
-  background-color: #f6f9fa;
-  opacity: 100%;
-  border-radius: 10px;
-  box-shadow: 2px 2px 2px rgb(189, 189, 189);
-}
 
-/* ground rule */
-.rule {
-  margin-top: 20px;
-  font-weight: 700;
-  text-align: center;
-  color: black;
-}
+
 
 /* 목표 타이틀 */
 .tgoal {
