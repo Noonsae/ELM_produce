@@ -1,0 +1,127 @@
+@charset "utf-8";
+
+/* Guest_style */
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
+h1 {
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+button {
+  cursor: pointer;
+  border: none;
+}
+img {
+  border: none;
+}
+/* /Reset */
+
+/* visitation_page */
+.visitation {
+  width: 1320px;
+  height: 750px;
+  margin: 80px auto;
+  padding: 3.5% 4.5%;
+
+  background: url("../assets/images/guest_background.png") no-repeat center / contain ;
+  
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+/* visitation_input_box */
+.visitation_input_box {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 80px;
+}
+
+/* visitation_input */
+.visitation_input {
+  width: 90%;
+  height: 50px;
+
+  font-size: 1.5em;
+  text-align: center;
+
+  color: #333;
+
+  border-color: #555;
+  border-radius: 15px;
+}
+
+.posting_btn {
+  font-size: 1.2em;
+  width: 7%;
+  border-radius: 15px;
+  background-color: #444;
+  color: #fff;
+}
+
+.visitation_board {
+  width: 62%;
+  height: 480px;
+  padding: 2%;
+
+  font-size: 1.5em;
+
+  box-shadow: 3px 3px #c3c3c3;
+  
+  border: 2px solid #cccc;
+  border-radius: 10px;
+
+  float: left;
+  overflow: auto;
+}
+
+/* 스크롤 바 */
+/* /스크롤 바 */
+
+.visitation_text {
+  width: 35%;
+  height: 140px;  
+  padding-top: 30px;
+
+  /* background-color: #ddd; */
+
+  text-align: center;  
+  
+  font-size: 1.8em;  
+  float: right;
+}
+
+.visitation_text > p {
+  margin-bottom: 0;
+}
+
+.visitation_photo {
+  width: 35%;
+  height: 320px;
+  margin-top: 20px;
+  float: right;
+
+  text-indent: -9999px;
+  background: url(../assets/images/photo_ex.jpg.png) no-repeat center / cover;
+  border-radius: 20px;
+
+}

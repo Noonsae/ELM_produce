@@ -1,3 +1,4 @@
+@charset "utf-8";
 @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Jua&family=Noto+Sans+KR:wght@100..900&family=Orbit&display=swap');
 
 * {
@@ -60,7 +61,7 @@
     /* 이미지 색상 어둡게 (원래 색상의 80%) */
 }
 
-.card-text {
+.card_text {
     font-family: "Orbit", sans-serif;
     font-weight: bold; 
     color: #333;
