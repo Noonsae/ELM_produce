@@ -1,56 +1,28 @@
 @charset "utf-8";
 
-/* Guest_style */
-
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
-
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-.clearfix::after {
-  content: "";
-  display: block;
-  clear: both;
-}
-ul,
-ol,
-li {
-  list-style: none;
-}
-h1 {
-  margin: 0;
-}
-a {
-  text-decoration: none;
-  color: #000;
-}
-button {
-  cursor: pointer;
-  border: none;
-}
-img {
-  border: none;
-}
-/* /Reset */
-
 /* visitation_page */
+.visitation_wrap {
+  width: 1320px;
+  height: 100vh;  
+  margin: 0 auto;  
+  display: flex; 
+  align-items: center;
+  
+  font-family: "Noto Sans KR", sans-serif;
+}
+
 .visitation {
   width: 1320px;
   height: 750px;
-  margin: 80px auto;
-  padding: 3.5% 4.5%;
-
-  background: url("../assets/images/guest_background.png") no-repeat center / contain ;
-  
-  font-family: "Noto Sans KR", sans-serif;
+  padding: 2.8% 4.5%;
+  margin-bottom: -50px;
+  background: url("../assets/images/guest_background.png") no-repeat center / cover ;
 }
 
 /* visitation_input_box */
 .visitation_input_box {
   width: 100%;
+  
   display: flex;
   justify-content: space-between;
   margin-bottom: 80px;
@@ -121,7 +93,7 @@ img {
   float: right;
 
   text-indent: -9999px;
-  background: url(../assets/images/photo_ex.jpg.png) no-repeat center / cover;
+  background: url(../assets/images/photo_ex.png) no-repeat center / cover;
   border-radius: 20px;
 
 }
