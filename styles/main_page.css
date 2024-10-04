@@ -6,7 +6,8 @@
   font-weight: weight;
   box-sizing: border-box;
 }
-header {
+
+.team_nav {
   position: fixed;
   display: flex;
   justify-content: flex-start;
@@ -17,7 +18,6 @@ header {
   height: 80px;
   padding: 0 30px;
   background-color: black;
-  /* margin-bottom: 80px; */
   z-index: 10;
 }
 

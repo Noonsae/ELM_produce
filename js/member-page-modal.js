@@ -1,6 +1,5 @@
 $(document).ready(function () {
-  $.getJSON('../data/member.json', function (data) {    
-
+  $.getJSON('./data/member.json', function (data) {    
     // 멤버 카드 클릭했을 때
     $('.card').on('click', function () {    
       const name = $(this).find('.card-text').text(); // 클릭한 멤버 이름 찾기
