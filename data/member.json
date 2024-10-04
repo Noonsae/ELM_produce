@@ -1,7 +1,7 @@
 [
   {
     "name": "최민석",
-    "photo": "",
+    "photo": "./assets/images/profile_최민석.png",
     "mbti": "ISFJ 전형적인 ISFJ의 표본인 것 같습니다.",
     "strengths": "학습에 있어 스펀지 같은 <strong>흡수력</strong>과 어떤 문제더라도 포기하지 않는 <strong>끈기!</strong>",
     "weaknesses": "별명이 눈새인 만큼 진담과 농담을 잘 구분하지 못함. (눈새가 원래 이런 뜻이 아닌데 .. ㅠㅠ)",
@@ -34,7 +34,7 @@
   },
   {
     "name": "김은지",
-    "photo": "",
+    "photo": "./assets/images/profile_김은지.jpg",
     "mbti": "ISTP (이기적인 mbti아닙니다…)<br>IST는 매번 똑같이 나오고 P랑 J는 6:4 정도의 비율이에요😐",
     "strengths": "맡은 일엔 책임감 있게 합니다!<br>완벽하게 하는 걸 좋아하는 편이에요!",
     "weaknesses": "낯을 많이 가립니다.. 하지만 친해지면 장난도 많이 치고 말도 많아져요😋",
@@ -45,7 +45,7 @@
   },
   {
     "name": "주호빈",
-    "photo": "",
+    "photo": "./assets/images/profile_주호빈.png",
     "mbti": "MBTI는 INTP이고 매번 바뀐적이 없습니다!",
     "strengths": "잘웃으며 밝은성격을 가지고 있는것 같습니다!!!",
     "weaknesses": "",
@@ -56,7 +56,7 @@
   },
   {
     "name": "박은영",
-    "photo": "",
+    "photo": "./assets/images/profile_박은영.jpg",
     "mbti": "INFJ 친해지기까지 시간이 조금 걸리는 편이지만 가까워진다면 잘 챙겨줘요",
     "strengths": "완벽주의자 성향이 있어서 준비성이 철저하고 꼼꼼하지만,",
     "weaknesses": "함께하는 친구나 팀원이 피곤해 할 수 있어요",
