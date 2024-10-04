@@ -58,10 +58,11 @@
 
 .visitation_inner {
   width: 100%;
-  /* border: 3px solid #000; */
+  border: 3px solid #000;
 }
 .visitation_board {
   display: flex;
+  flex-direction: row-reverse;
   justify-content: space-between;
   flex-wrap: wrap;
 }
