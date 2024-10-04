@@ -20,15 +20,17 @@ $(document).ready(function () {
 
       $('.overlay').addClass('is-active');
       $('.team-card').addClass('is-active');
+      $('body').css('overflow', 'hidden');
     });
+
 
     // 모달 닫기 버튼 눌렀을 때
     $('.btn-close').on('click', function () {
       $('.overlay').removeClass('is-active');
       $('.team-card').removeClass('is-active');
+      $('body').css('overflow', '');
     });
   });
-
 });
 
 function getProfile(name, data) {
