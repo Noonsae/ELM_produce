@@ -14,11 +14,14 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="module" src="./js/weather_api.js"></script>
+    <!-- <script src="./js/member-page-modal.js"></script> -->
 
     <link rel="stylesheet" href="./styles/normalize.css">
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/main_page.css">
     <link rel="stylesheet" href="./styles/team_page.css">
+    <link rel="stylesheet" href="./styles/member_page.css">
+    <link rel="stylesheet" href="./styles/member_page_modal.css">
 
 </head>
 
@@ -55,13 +58,13 @@
     <!-- /main_visual -->
 
     <!-- section_02_Team_info -->
-    <section class="sub_01">
-        <!-- <section class="team_info"> -->
+    <section class="team_info">
+
         <!-- jumbotron -->
         <div class="jumbotron">
-            <div class="container-fluid">
+            <div class="container">
                 <h3 class="title">ELM</h3>
-                <p class="content">적극적으로 소통하며 성장하는 동료들 <br>
+                <p class="jb_content">적극적으로 소통하며 성장하는 동료들 <br>
                     <span class="eng">Engaging Learning Mates</span>
                 </p>
             </div>
@@ -92,21 +95,107 @@
             </div>
         </div>
     </section>
-
-    <!-- team_info_container -->
-    <!-- team_info_container -->
-    <!-- inner -->
-
-
-    </section>
-    <!-- section_02_Team_info -->
+    <!-- /section_02_Team_info -->
 
     <!-- section_03_Member_info -->
-    <section id="sub_page2"> section 02</section>
-    <section id="sub_page3"> section 03</section>
+
+    <section class="container">
+        <div class="title">
+            <p>
+                우리 팀원을 소개합니다!
+                <!-- <span>emoji_img</span> -->
+            </p>
+        </div>
+        <div class="content">
+            <div class="card" style="background-color: rgba(249, 249, 212, 0.829);">
+                <img src="./assets/images/최민석.png">
+                <div class="card-body">
+                    <p class="card-text">최민석</p>
+                </div>
+            </div>
+            <div class="card" style="background-color: rgba(250, 221, 201, 0.823);">
+                <img src="./assets/images/우지영.png">
+                <div class="card-body">
+                    <p class="card-text">우지영</p>
+                </div>
+            </div>
+            <div class="card" style="background-color: rgba(224, 216, 248, 0.849);">
+                <img src="./assets/images/이경민.png">
+                <div class="card-body">
+                    <p class="card-text">이경민</p>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="card" style="background-color: rgba(219, 253, 223, 0.819);">
+                <img src="./assets/images/김은지.png">
+                <div class="card-body">
+                    <p class="card-text">김은지</p>
+                </div>
+            </div>
+            <div class="card" style="background-color: rgba(200, 222, 250, 0.783);">
+                <img src="./assets/images/주호빈.png">
+                <div class="card-body">
+                    <p class="card-text">주호빈</p>
+                </div>
+            </div>
+            <div class="card" style="background-color: rgba(250, 211, 226, 0.745);">
+                <img src="./assets/images/박은영.png">
+                <div class="card-body">
+                    <p class="card-text">박은영</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- section_03_Member_detail -->
+    <section class="team-card">
+        <header class="team-card-header">
+            <div class="photo"></div>
+            <h1 class="name">김은지</h1>
+        </header>
+
+        <dl class="team-card-info">
+            <div>
+                <dt>MBTI</dt>
+                <dd></dd>
+            </div>
+            <div>
+                <dt>장점</dt>
+                <dd></dd>
+            </div>
+            <div>
+                <dt>단점</dt>
+                <dd></dd>
+            </div>
+            <div>
+                <dt>취미</dt>
+                <dd></dd>
+            </div>
+            <div>
+                <dt>블로그/Github주소</dt>
+                <dd></dd>
+                <dd></dd>
+            </div>
+            <div>
+                <dt>키워드</dt>
+                <dd></dd>
+            </div>
+        </dl>
+
+        <button class="close-btn" type="button"></button>
+    </section>
+    <!-- /section_03_Member_detail -->
+
+    <div class="overlay"></div>
+    
     <!-- section_03_Member_info -->
 
     <!-- section_04_visited -->
+
+    <section id="sub_page3">
+
+    </section>
     <!-- section_04_visited -->
 
     <!-- attraction -->
@@ -119,6 +208,7 @@
     <!-- /attraction -->
     </div>
 
+    
 
 
 
