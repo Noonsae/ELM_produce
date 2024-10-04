@@ -1,0 +1,33 @@
+.page_up_btn {
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  box-shadow: -6px -1px 115px 0px rgba(0,0,0,0.72);
+  -webkit-box-shadow: -6px -1px 115px 0px rgba(0,0,0,0.72);
+  -moz-box-shadow: -6px -1px 115px 0px rgba(0,0,0,0.72);
+  border-radius: 10px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.page_up_btn img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.page_up_btn:hover {
+  animation: bounce 0.5s ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
