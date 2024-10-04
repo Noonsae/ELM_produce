@@ -11,79 +11,74 @@
   font-family: "Noto Sans KR", sans-serif;
 }
 
-.visitation {
-  width: 1320px;
-  height: 750px;
+.visitation_wrap {
+  width: 1320px;  
   padding: 2.8% 4.5%;
   margin: 0 auto -50px;
-  background: url("../assets/images/guest_background.png") no-repeat center / cover ;
+  /* background: #555 no-repeat center / cover ; */
+  /* border: 3px solid #333; */
+
+  display: flex;
+  flex-direction: column;
 }
 
 /* visitation_input_box */
 .visitation_input_box {
-  width: 100%;
-  
+  width: 100%;  
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  margin-bottom: 80px;
+  align-items: center;
+  margin-bottom: 50px;
 }
 
 /* visitation_input */
-.visitation_input {
-  width: 90%;
+.visitation_input_box > input {
+  width: 70%;
   height: 50px;
 
-  font-size: 1.5em;
+  margin-bottom: 50px;
+
+  font-size: 3em;
   text-align: center;
 
   color: #333;
 
   border-color: #555;
-  border-radius: 15px;
+  border-radius: 5px;
 }
 
 .posting_btn {
-  font-size: 1.2em;
-  width: 7%;
+  width: 45%;
+  height: 50px;
   border-radius: 15px;
   background-color: #444;
+  font-size: 1.5em;
   color: #fff;
 }
 
+.visitation_inner {
+  width: 100%;  
+  height: 600px;
+  border: 3px solid #000;
+}
 .visitation_board {
-  width: 62%;
-  height: 480px;
-  padding: 2%;
+  display: flex;
 
-  font-size: 1.5em;
-
-  box-shadow: 3px 3px #c3c3c3;
-  
-  border: 2px solid #cccc;
-  border-radius: 10px;
-
-  float: left;
-  overflow: auto;
 }
 
-/* 스크롤 바 */
-/* /스크롤 바 */
-
-.visitation_text {
+.visitation_posted {
   width: 35%;
-  height: 140px;  
-  padding-top: 30px;
+  height: 480px;
 
-  /* background-color: #ddd; */
-
-  text-align: center;  
+  padding: 10%;
   
-  font-size: 1.8em;  
-  float: right;
-}
+  font-size: 2em;
+  color: #111;  
 
-.visitation_text > p {
-  margin-bottom: 0;
+  /* box-shadow: 3px 3px #c3c3c3; */
+  
+  background: url(../assets/images/posted.png) no-repeat center / contain;
 }
 
 .visitation_photo {
@@ -95,5 +90,4 @@
   text-indent: -9999px;
   background: url(../assets/images/photo_ex.png) no-repeat center / cover;
   border-radius: 20px;
-
 }
