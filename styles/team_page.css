@@ -1,34 +1,5 @@
 @charset "utf-8";
 
-.team_inner {
-  width: 1320px;
-  height: calc(100vh - 300px);
-
-  margin: 0 auto;
-
-  
-  text-align: center;
-
-  display: flex;
-  justify-content: space-between; /* 수평 가운데 정렬 */
-  align-items: center; /* 수직 가운데 정렬 */
-}
-
-.content {
-  font-weight: 800;
-  font-size: 18px;
-  color: #000;
-}
-
-.title {
-  font-size: 50px;
-  font-weight: 900;
-}
-
-.eng {
-  color: #bfc0c2;
-}
-
 .jumbotron {  
   background-image: url("../assets/images/image.png");  
   filter: brightness(130%);
@@ -36,12 +7,44 @@
   width: 100%;
   height: 300px;
   display: flex;
-  flex-direction: column;
+  align-items: center;
 }
 
-/*  */
+.container-fluid {
+  margin: 0 auto;  
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
 
+.title {
+  font-size: 50px;
+  font-weight: 900;
+}
 
+.content {
+  font-weight: 800;
+  font-size: 0.5em;
+  color: #000;
+  margin: 0;
+}
+
+.eng {
+  color: #bfc0c2;
+}
+
+.team_inner {
+  width: 1320px;
+  height: calc(100vh - 300px);
+
+  margin: -70px auto 0;
+
+  text-align: center;
+
+  display: flex;
+  justify-content: space-between; /* 수평 가운데 정렬 */
+  align-items: center; /* 수직 가운데 정렬 */
+}
 /* ground rule 밖을 둘러썬 div css */
 .ground {
   width: 620px;
@@ -52,6 +55,7 @@
 
 /* ground rule */
 .rule {
+  font-size: 50px;
   margin-top: 20px;
   font-weight: 700;
   text-align: center;
