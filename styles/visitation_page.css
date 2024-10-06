@@ -1,25 +1,26 @@
 @charset "utf-8";
 
-/* visitation_page */
-.visitation_wrap {
+/* visitation_input_box */
+
+
+/* visitation_board */
+.visitation_board {
   width: 1320px;
   height: 100vh;    
+
+  margin: 0 auto;
+
   display: flex; 
   align-items: center;
-  font-family: "Noto Sans KR", sans-serif;
+  font-family: "Noto Sans KR", sans-serif;  
+
+  flex-direction: column;
+  overflow-y: hidden;  
+
 
   /* border: 3px solid #000; */
 }
 
-.visitation_wrap {  
-  margin: 0 auto;
-  padding-top: 200px;
-  /* background: #555 no-repeat center / cover ; */
-  /* border: 3px solid #333; */
-
-  display: flex;
-  flex-direction: column;
-}
 
 /* visitation_input_box */
 .visitation_input_box {
@@ -47,6 +48,16 @@
   border-radius: 5px;
 }
 
+.visitation_input_box > input {
+  opacity: 1;
+  transition: 0.5s ease;
+}
+
+.visitation_input_box > input:focus::placeholder {
+  opacity: 0;
+  transition: 0.5s ease;
+}
+
 .posting_btn {
   width: 45%;
   height: 50px;
@@ -58,39 +69,24 @@
 
 .visitation_inner {
   width: 100%;
-  border: 3px solid #000;
+  border: 3px solid #000;  
 }
 .visitation_board {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
   justify-content: space-between;
-  flex-wrap: wrap;
+  flex-wrap: wrap; 
 }
 
 .visitation_posted {
-  width: 30%;
+  width: 25%;
   height: 500px;
-
+  
   padding: 10% 5% 0 5% ;
-  padding-top: 10%;
-  
-  
-  
+  padding-top: 10%;  
   
   font-size: 2em;
   color: #111;  
-
-  /* box-shadow: 3px 3px #c3c3c3; */
   
-  background: url(../assets/images/posted.png) no-repeat center / contain;
-}
-
-.visitation_photo {
-  width: 35%;
-  height: 320px;
-  margin-top: 20px;  
-
-  text-indent: -9999px;
-  background: url(../assets/images/photo_ex.png) no-repeat center / cover;
-  border-radius: 20px;
+  background: url(../assets/images/posted.png) no-repeat center / cover;
 }

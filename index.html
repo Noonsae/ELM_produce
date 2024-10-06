@@ -26,7 +26,6 @@
     <link rel="stylesheet" href="./styles/member_page.css">
     <link rel="stylesheet" href="./styles/member_page_modal.css">
     <link rel="stylesheet" href="./styles/visitation_page.css">
-    <link rel="stylesheet" href="./index.css">
 </head>
 
 <body>
@@ -42,7 +41,8 @@
                     <li><a href="#main_page" class="nav-link">HOME</a></li>
                     <li><a href="#team_page" class="nav-link">팀소개</a></li>
                     <li><a href="#member_page" class="nav-link">팀원소개</a></li>
-                    <li><a href="#visitation_page" class="nav-link">방명록</a></li>
+                    <li><a href="#visitation_input_box" class="nav-link">방문록쓰기</a></li>
+                    <li><a href="#visitation_board" class="nav-link">방문록보기</a></li>
                 </ul>
                 <!-- fetch_weather_info -->
                 <p class="wder">☀️<span class="do">18</span>도</p>
@@ -53,198 +53,191 @@
 
     </header>
     <!-- /header(logo, nav, fetch .. ) -->
-
     <!-- main_visual -->
-    <section class="main_visual" id="main_page">
-        <div class="main_overlay">
-            <!-- <h2>ELM팀 소개 페이지입니다</h2> -->
-        </div>
-        <!-- 비쥬얼사진이라는 것을 알려주는 text 추가 후 text-indent:-9999em -->
-        <!-- main_visual이 심심해 보인다면?? 메타버스 단체사진을 여러장 촬영 후 롤링(슬라이드) 추가 가능 -->
-    </section>
-    <!-- /main_visual -->
+    <div class="wrap">
+        <section class="main_visual ops" id="main_page">
+            <div class="main_overlay">
+                <!-- <h2>ELM팀 소개 페이지입니다</h2> -->
+            </div>
+            <!-- 비쥬얼사진이라는 것을 알려주는 text 추가 후 text-indent:-9999em -->
+            <!-- main_visual이 심심해 보인다면?? 메타버스 단체사진을 여러장 촬영 후 롤링(슬라이드) 추가 가능 -->
+        </section>
+        <!-- /main_visual -->
 
-    <!-- section_02_Team_info -->
-    <section class="team_info" id="team_page">
+        <!-- section_02_Team_info -->
+        <section class="team_info ops" id="team_page">
 
-        <!-- jumbotron -->
-        <div class="jumbotron">
-            <div class="container">
-                <h3 class="title">ELM</h3>
-                <p class="jb_content">적극적으로 소통하며 성장하는 동료들 <br>
-                    <span class="eng">Engaging Learning Mates</span>
+            <!-- jumbotron -->
+            <div class="jumbotron">
+                <div class="container">
+                    <h3 class="title">ELM</h3>
+                    <p class="jb_content">적극적으로 소통하며 성장하는 동료들 <br>
+                        <span class="eng">Engaging Learning Mates</span>
+                    </p>
+                </div>
+            </div>
+            <!-- /jumbotron -->
+
+            <div class="team_content_wrap">
+                <div class="ground">
+                    <h3 class="rule">Ground rules</h3>
+                    <div class="rule_text">
+                        <p>존중 :
+                            상처 주는 말이나 부담스러운 말은 금지! 서로의 마음을 배려하며 소통해요</p>
+                        <p>이해 :
+                            팀원 중 한 명이라도 모르면 다 같이 짚고 넘어가기! 팀과 함께 성장해요</p>
+                        <p>소통 :
+                            의견과 정보는 아끼지 말고 적극적으로 공유하기! 나눌수록 더 좋은 결과가 나와요
+                        </p>
+                        <p>공유 :
+                            하루 공부 상황과 일정을 팀과 공유하기! 잠깐 자리를 비우더라도 꼭 이야기해요
+                        </p>
+                        <p>책임감 :
+                            맡은 일은 끝까지 책임감 있게! 목표를 위해 최선을 다해요</p>
+                    </div>
+                </div>
+
+                <div class="goal">
+                    <h1 class="tgoal">Team's goal</h1>
+                    <span class="clear">최종 완성: 2024. 10. 04. 20시까지 !!</span>
+                    <a type="button" class="btn btn-danger" href="#visitation_page">응원하러 가기!</a>
+                </div>
+            </div>
+        </section>
+        <!-- /section_02_Team_info -->
+
+        <!-- section_03_Member_info -->
+        <section class="member_info ops" id="member_page">
+            <div class="mem_title">
+                <p>
+                    우리 팀원을 소개합니다!
+                    <!-- <span>emoji_img</span> -->
                 </p>
             </div>
-        </div>
-        <!-- /jumbotron -->
-
-        <!-- inner -->
-        <!-- L:300px(15.6%), R:300px(15.6%) -->
-        <div class="team_inner">
-            <div class="ground">
-                <h3 class="rule">Ground rules</h3>
-                <div class="rule_text">
-                    <p>존중 :
-                        상처 주는 말이나 부담스러운 말은 금지! 서로의 마음을 배려하며 소통해요</p>
-                    <p>이해 :
-                        팀원 중 한 명이라도 모르면 다 같이 짚고 넘어가기! 팀과 함께 성장해요</p>
-                    <p>소통 :
-                        의견과 정보는 아끼지 말고 적극적으로 공유하기! 나눌수록 더 좋은 결과가 나와요
-                    </p>
-                    <p>공유 :
-                        하루 공부 상황과 일정을 팀과 공유하기! 잠깐 자리를 비우더라도 꼭 이야기해요
-                    </p>
-                    <p>책임감 :
-                        맡은 일은 끝까지 책임감 있게! 목표를 위해 최선을 다해요</p>
+            <div class="content">
+                <div class="card" style="background-color: rgba(249, 249, 212, 0.829);">
+                    <img src="./assets/images/최민석.png">
+                    <div class="card-body">
+                        <p class="card-text">최민석</p>
+                    </div>
+                </div>
+                <div class="card" style="background-color: rgba(250, 221, 201, 0.823);">
+                    <img src="./assets/images/우지영.png">
+                    <div class="card-body">
+                        <p class="card-text">우지영</p>
+                    </div>
+                </div>
+                <div class="card" style="background-color: rgba(224, 216, 248, 0.849);">
+                    <img src="./assets/images/이경민.png">
+                    <div class="card-body">
+                        <p class="card-text">이경민</p>
+                    </div>
                 </div>
             </div>
-
-            <div class="goal">
-                <h1 class="tgoal">Team's goal</h1>
-                <span class="clear">최종 완성: 2024. 10. 04. 20시까지 !!</span>
-                <a type="button" class="btn btn-danger" href="#visitation_page">응원하러 가기!</a>
-            </div>
-        </div>
-    </section>
-    <!-- /section_02_Team_info -->
-
-    <!-- section_03_Member_info -->
-    <section class="member_info" id="member_page">
-        <div class="mem_title">
-            <p>
-                우리 팀원을 소개합니다!
-                <!-- <span>emoji_img</span> -->
-            </p>
-        </div>
-        <div class="content">
-            <div class="card" style="background-color: rgba(249, 249, 212, 0.829);">
-                <img src="./assets/images/최민석.png">
-                <div class="card-body">
-                    <p class="card-text">최민석</p>
+            <div class="content">
+                <div class="card" style="background-color: rgba(219, 253, 223, 0.819);">
+                    <img src="./assets/images/김은지.png">
+                    <div class="card-body">
+                        <p class="card-text">김은지</p>
+                    </div>
+                </div>
+                <div class="card" style="background-color: rgba(200, 222, 250, 0.783);">
+                    <img src="./assets/images/주호빈.png">
+                    <div class="card-body">
+                        <p class="card-text">주호빈</p>
+                    </div>
+                </div>
+                <div class="card" style="background-color: rgba(250, 211, 226, 0.745);">
+                    <img src="./assets/images/박은영.png">
+                    <div class="card-body">
+                        <p class="card-text">박은영</p>
+                    </div>
                 </div>
             </div>
-            <div class="card" style="background-color: rgba(250, 221, 201, 0.823);">
-                <img src="./assets/images/우지영.png">
-                <div class="card-body">
-                    <p class="card-text">우지영</p>
-                </div>
-            </div>
-            <div class="card" style="background-color: rgba(224, 216, 248, 0.849);">
-                <img src="./assets/images/이경민.png">
-                <div class="card-body">
-                    <p class="card-text">이경민</p>
-                </div>
-            </div>
-        </div>
-        <div class="content">
-            <div class="card" style="background-color: rgba(219, 253, 223, 0.819);">
-                <img src="./assets/images/김은지.png">
-                <div class="card-body">
-                    <p class="card-text">김은지</p>
-                </div>
-            </div>
-            <div class="card" style="background-color: rgba(200, 222, 250, 0.783);">
-                <img src="./assets/images/주호빈.png">
-                <div class="card-body">
-                    <p class="card-text">주호빈</p>
-                </div>
-            </div>
-            <div class="card" style="background-color: rgba(250, 211, 226, 0.745);">
-                <img src="./assets/images/박은영.png">
-                <div class="card-body">
-                    <p class="card-text">박은영</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- section_03_Member_detail -->
-    <section class="team-card">
-        <header class="team-card-header">
-            <div class="photo"></div>
-            <h1 class="name">김은지</h1>
-        </header>
+        </section>
+        <!-- section_03_Member_detail -->
+        <section class="team-card ops">
+            <header class="team-card-header">
+                <div class="photo"></div>
+                <h1 class="name">김은지</h1>
+            </header>
 
-        <dl class="team-card-info">
-            <div>
-                <dt>MBTI</dt>
-                <dd></dd>
-            </div>
-            <div>
-                <dt>장점</dt>
-                <dd></dd>
-            </div>
-            <div>
-                <dt>단점</dt>
-                <dd></dd>
-            </div>
-            <div>
-                <dt>취미</dt>
-                <dd></dd>
-            </div>
-            <div>
-                <dt>블로그/Github주소</dt>
-                <dd></dd>
-                <dd></dd>
-            </div>
-            <div>
-                <dt>키워드</dt>
-                <dd></dd>
-            </div>
-        </dl>
+            <dl class="team-card-info">
+                <div>
+                    <dt>MBTI</dt>
+                    <dd></dd>
+                </div>
+                <div>
+                    <dt>장점</dt>
+                    <dd></dd>
+                </div>
+                <div>
+                    <dt>단점</dt>
+                    <dd></dd>
+                </div>
+                <div>
+                    <dt>취미</dt>
+                    <dd></dd>
+                </div>
+                <div>
+                    <dt>블로그/Github주소</dt>
+                    <dd></dd>
+                    <dd></dd>
+                </div>
+                <div>
+                    <dt>키워드</dt>
+                    <dd></dd>
+                </div>
+            </dl>
 
-        <button type="button" class="btn-close"></button>
-    </section>
-    <!--멤버카드를 클릭했을 때 생성되는 full_back-->
-    <div class="overlay"></div>
-    <!-- /section_03_Member_detail -->
+            <button type="button" class="btn-close"></button>
+        </section>
+        <!--멤버카드를 클릭했을 때 생성되는 full_back-->
+        <div class="overlay"></div>
+        <!-- /section_03_Member_detail -->
 
-    <!-- section_04 visitation_page -->
 
-    <section class="visitation_wrap" id="visitation_page">
-        <!-- visitation_input_box -->
-        <div class="visitation_input_box">
+
+        <!-- section_04 visitation_input_box -->
+        <section class="visitation_input_box onescroll" id="visitation_input_box">
             <!-- visitation_input -->
-            <input type="text" class="visitation_name_input" id="visitation_name_input" placeholder="이름">
+            <input type="text" class="visitation_name_input" id="visitation_name_input"
+                placeholder="게시판에 남길 이름을 적어주세요.">
             <input type="text" class="visitation_text_input" id="visitation_text_input"
-                placeholder="ELM에게 하고 싶은 말을 적어주세요">
+                placeholder="게시판을 통해 ELM 멤버들에게 하고 싶은 말을 적어주세요">
             <!-- posting_btn -->
             <button class="posting_btn" id="posting_btn">기록하기</button>
-        </div>
-        <!-- /visitation_input_box -->
+        </section>
+        <!-- /section_04 visitation_input_box -->
 
         <!-- visitation_board -->
-        <div class="visitation_inner">
-            <div class="visitation_board clearfix" id="visitation_board">
+        <section class="visitation_board" id="visitation_board">
+            <div class="visitation_inner">
+                <div class="visitation_board clearfix" id="visitation_board">
+                </div>
             </div>
-        </div>
-        <!-- /visitation_board -->
-
-        <!-- visitation_photo -->
-        <div class="visitation_photo">
-            <p>적당한 사진</p>
-        </div>
-        <!-- /visitation_photo -->
-        </div>
-    </section>
-    <!-- /section_04 visitation_page -->
-
+            <!-- /visitation_board -->
+            <!-- visitation_photo -->
+            <div class="visitation_photo">
+                <p>적당한 사진</p>
+            </div>
+            <!-- /visitation_photo -->
+        </section>
+        <!-- /section_05 visitation_board -->
+    </div>
 
     <!-- attraction -->
     <!-- 
-        side_nav_dot
-        script를 활용하여 scroll_event + animation 추가 예정
+        side_nav_dot        
     -->
-    <!-- 컨텐츠 -->
 
-    <!--
-        page_up_btn
-        우측하단에 position:fixed 하여 클릭 시 web 최상단으로 이동
-    -->
+    <!-- page_up_btn -->
     <button class="page_up_btn" type="button" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
         <img src="./assets/images/up_button.jpg" alt="위로 올라가기">
     </button>
+    <!-- /page_up_btn -->
+
     <!-- /attraction -->
-    </div>
 </body>
 
 </html>

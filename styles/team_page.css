@@ -22,12 +22,12 @@
   text-align: center;
 }
 
-.team_inner {
+.team_content_wrap {
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 150px;
 }
 
 h3 {
