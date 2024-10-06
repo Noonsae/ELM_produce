@@ -46,54 +46,60 @@ $("#posting_btn").click(async function () {
   window.location.reload();
 });
 
-
-// timestamp 역순으로 필드 정렬
-// Firestore에서 최신 포스트 가져오기
-
-async function fetchLatestPosts() {
-  const postsCollection = collection(db, "ELM_visitation_list");
-
-  // 쿼리 생성: timestamp 기준으로 내림차순 정렬
-  const q = query(postsCollection, orderBy("timestamp", "desc"));
+// Firestore에서 데이터를 가져오는 함수
+async function fetchData() {
+  // Firestore에서 컬렉션을 가져오고 timestamp 기준으로 내림차순 정렬
+  const q = query(collection(db, "ELM_visitation_list"), orderBy("timestamp", "desc"));
 
   try {
-      const querySnapshot = await getDocs(q);
-      const postsList = querySnapshot.docs.map(doc => ({
-          id: doc.id,
-          ...doc.data()
-      }));
-      
-      console.log(postsList);
-      
+    const docs = await getDocs(q);
+
+    // 가져온 데이터를 배열로 저장
+    const postsList = docs.docs.map(doc => ({
+      id: doc.id,
+      ...doc.data()
+    }));
+
+    // 데이터를 기반으로 HTML 생성
+    displayPosts(postsList);  // postsList 배열을 HTML로 표시하는 함수 호출
   } catch (error) {
-      console.error("문서 가져오기 실패: ", error);
+    console.error("문서 가져오기 실패: ", error);
   }
 }
-fetchLatestPosts();
 
+// HTML을 생성하여 표시하는 함수
+function displayPosts(postsList) {
+  const visitationBoard = document.getElementById("visitation_board");
 
-// DB 필드에 맞는 데이터값을 스트링으로 가지고 오기
-let docs = await getDocs(collection(db, "ELM_visitation_list"));
+  // 기존 콘텐츠 초기화
+  visitationBoard.innerHTML = '';
 
-docs.forEach((doc) => {
-  let row = doc.data();
-  let user_name = row["visitation_name_input"];
-  let comment = row["visitation_text_input"];
-  let Y = row["year"];
-  let Mth = row["month"];
-  let D = row["day"];
-  let H = row["hour"];
-  let Min = row["minute"];
+  // postsList 배열을 순회하면서 각 게시글의 HTML을 생성
+  postsList.forEach(post => {
+    let Y = post["year"];
+    let Mth = post["month"];
+    let D = post["day"];
+    let H = post["hour"];
+    let Min = post["minute"];
+    let user_name = post["visitation_name_input"];
+    let comment = post["visitation_text_input"];
 
-  let temp_html = `
-    <div class="visitation_posted">
-      <p>${user_name}</p>
-      <br>
-      <p>${comment}</p>
-      <br>
-      <br>      
-      <p>${Y}년 ${Mth}월 ${D}일 ${H}시 ${Min}분</p>
-    </div>
-    `;
-  $("#visitation_board").append(temp_html);
-});
+    // HTML 생성
+    let temp_html = 
+      `<div class="visitation_posted">
+        <p>${user_name}</p>
+        <br>
+        <p>${comment}</p>
+        <br>
+        <br>      
+        <p>${Y}년 ${Mth}월 ${D}일 ${H}시 ${Min}분</p>
+      </div>`
+    ;
+
+    // 생성된 HTML을 DOM에 추가
+    visitationBoard.innerHTML += temp_html;
+  });
+}
+
+// 페이지가 로드될 때 게시글을 불러오기
+fetchData();
