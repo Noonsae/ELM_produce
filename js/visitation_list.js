@@ -47,7 +47,9 @@ $("#posting_btn").click(async function () {
 });
 
 // DB 필드에 맞는 데이터값을 스트링으로 가지고 오기
+
 let docs = await getDocs(collection(db, "ELM_visitation_list"));
+
 
 docs.forEach((doc) => {
   let row = doc.data();
