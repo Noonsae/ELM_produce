@@ -31,13 +31,14 @@ $("#posting_btn").click(async function () {
   // Date의 년,월,일,시,분 정보만 입력
   let doc = {
     visitation_name_input: user_name,
-    visitation_text_input: comment,    
+    visitation_text_input: comment,
     year: new Date().getFullYear(),
     month: new Date().getMonth(),
     day: new Date().getDate(),
     hour: new Date().getHours(),
     minute: new Date().getMinutes(),
-  };  
+    timestamp: new Date(),
+  };
 
   // 데이터 저장 후 알림창 생성
   await addDoc(collection(db, "ELM_visitation_list"), doc);
@@ -47,8 +48,8 @@ $("#posting_btn").click(async function () {
 
 // DB 필드에 맞는 데이터값을 스트링으로 가지고 오기
 let docs = await getDocs(collection(db, "ELM_visitation_list"));
-docs.forEach((doc) => {
 
+docs.forEach((doc) => {
   let row = doc.data();
   let user_name = row["visitation_name_input"];
   let comment = row["visitation_text_input"];
@@ -61,9 +62,11 @@ docs.forEach((doc) => {
   let temp_html = `
     <div class="visitation_posted">
       <p>${user_name}</p>
-      <p>${comment}</p>      
-      <p>작성일시      
-      : ${Y}년 ${Mth}월 ${D}일 ${H}시 ${Min}분</p>
+      <br>
+      <p>${comment}</p>
+      <br>
+      <br>      
+      <p>${Y}년 ${Mth}월 ${D}일 ${H}시 ${Min}분</p>
     </div>
     `;
   $("#visitation_board").append(temp_html);
