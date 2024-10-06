@@ -5,7 +5,7 @@ import {
   collection,
   addDoc,
 } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
-import { getDocs } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+import { getDocs, orderBy, query} from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
 
 // Firebase 구성 정보 설정
 const firebaseConfig = {
@@ -46,10 +46,34 @@ $("#posting_btn").click(async function () {
   window.location.reload();
 });
 
+
+// timestamp 역순으로 필드 정렬
+// Firestore에서 최신 포스트 가져오기
+
+async function fetchLatestPosts() {
+  const postsCollection = collection(db, "ELM_visitation_list");
+
+  // 쿼리 생성: timestamp 기준으로 내림차순 정렬
+  const q = query(postsCollection, orderBy("timestamp", "desc"));
+
+  try {
+      const querySnapshot = await getDocs(q);
+      const postsList = querySnapshot.docs.map(doc => ({
+          id: doc.id,
+          ...doc.data()
+      }));
+      
+      console.log(postsList);
+      
+  } catch (error) {
+      console.error("문서 가져오기 실패: ", error);
+  }
+}
+fetchLatestPosts();
+
+
 // DB 필드에 맞는 데이터값을 스트링으로 가지고 오기
-
 let docs = await getDocs(collection(db, "ELM_visitation_list"));
-
 
 docs.forEach((doc) => {
   let row = doc.data();
