@@ -88,9 +88,7 @@ function displayPosts(postsList) {
     let temp_html = 
       `<div class="visitation_posted">
         <p>${user_name}</p>
-        <br>
         <p>${comment}</p>
-        <br>
         <br>      
         <p>${Y}년 ${Mth}월 ${D}일 ${H}시 ${Min}분</p>
       </div>`
